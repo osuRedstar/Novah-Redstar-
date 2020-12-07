@@ -21,7 +21,7 @@ namespace Novah.core
 
         static void LogInternal(object o)
         {
-            var line = string.Format("{0} {1}", DateTime.Now, o);
+            var line = string.Format("{0} \r\n {1}", DateTime.Now, o);
             WriteLineToLog(line);
         }
 

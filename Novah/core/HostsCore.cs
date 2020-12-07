@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
-using System.Windows.Forms;
-using MetroFramework.Forms;
 using System.Diagnostics;
+using System.Windows;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Novah.core
 {
@@ -16,8 +13,6 @@ namespace Novah.core
         {
             return File.ReadAllLines(Environment.SystemDirectory + @"\drivers\etc\hosts");
         }
-
- 
 
         public static void changehosts(string[] hosts)
         {
@@ -29,8 +24,7 @@ namespace Novah.core
                 }
                 catch (Exception ex)
                 {
-                    DialogResult dr = MessageBox.Show(ex.Message, "NOVAH", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-                    if (dr == DialogResult.Retry)
+                    if (MessageBox.Show("Error! \r\r\r" + ex.Message, "Novah", MessageBoxButton.YesNo, MessageBoxImage.Error) == MessageBoxResult.Yes)
                     {
                         try
                         {
@@ -39,7 +33,7 @@ namespace Novah.core
                         catch
                         {
                             LogCore.Log(ex);
-                            MessageBox.Show("Error! \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Error! \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButton.OK, MessageBoxImage.Error);
                             string filepath = Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\novahlog.txt";
                             Process.Start(filepath);
                             Environment.Exit(0);
@@ -51,11 +45,15 @@ namespace Novah.core
             catch (Exception ex)
             {
                 LogCore.Log(ex);
-                MessageBox.Show("Error! \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error! \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButton.OK, MessageBoxImage.Error);
                 string filepath = Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\novahlog.txt";
                 Process.Start(filepath);
                 Environment.Exit(0);
             }
         }
     }
+}
+public enum Server
+{
+    bancho, debian
 }

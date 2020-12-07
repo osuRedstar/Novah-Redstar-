@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows;
 using WinHttp;
 
 namespace Novah.core
@@ -21,7 +17,7 @@ namespace Novah.core
             }
             catch
             {
-                MessageBox.Show("Connection Error", "Novah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Connection Error", "Novah", MessageBoxButton.OK, MessageBoxImage.Error);
                 Environment.Exit(0);
             }
             return win.ResponseText;

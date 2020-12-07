@@ -5,13 +5,13 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
+using System.Windows;
 
 namespace Novah.core
 {
     class CertificateCore
     {
-        static string ctp = MainForm.certthumbprint;
+        static string ctp = MainWindow.certthumbprint;
 
         public static Task<bool> GetStatusAsync()
         {
@@ -31,7 +31,7 @@ namespace Novah.core
             {
                 X509Store x509Store = new X509Store(StoreName.Root, StoreLocation.LocalMachine);
                 x509Store.Open(OpenFlags.ReadWrite);
-                var certificate = new X509Certificate2(Properties.Resources.cert1);
+                var certificate = new X509Certificate2(Properties.Resources.cert);
                 x509Store.Add(certificate);
                 x509Store.Close();
             }
@@ -39,7 +39,7 @@ namespace Novah.core
             {
                 LogCore.Log(ex);
 
-                MessageBox.Show("Error! \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error! \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButton.OK, MessageBoxImage.Error);
                 string filepath = Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\novahlog.txt";
                 Process.Start(filepath);
                 Environment.Exit(0);
@@ -69,7 +69,7 @@ namespace Novah.core
             {
                 LogCore.Log(ex);
 
-                MessageBox.Show("Error! \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error! \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButton.OK, MessageBoxImage.Error);
                 string filepath = Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\novahlog.txt";
                 Process.Start(filepath);
                 Environment.Exit(0);

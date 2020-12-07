@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Reflection;
@@ -23,10 +24,6 @@ namespace Novah
             InitializeComponent();
         }
 
-        private void UpdateForm_Load(object sender, EventArgs e)
-        {
-            updateStart();
-        }
         string ver = Assembly.GetExecutingAssembly().GetName().Version.ToString();
 
         private string winhttp(string http, string referer)
@@ -44,11 +41,34 @@ namespace Novah
             return result;
         }
 
+        public void changefilename()
+        {
+            string filename = System.IO.Path.GetFileName(Assembly.GetEntryAssembly().Location);
+            string kakao = "Novah.exe";
+            if (filename != kakao)
+            {
+                string path = Environment.CurrentDirectory;
+                FileInfo fileRename = new FileInfo(path + @"\" + kakao);
+                try
+                {
+                    Process[] processList = Process.GetProcessesByName("Novah");
+                    if (processList.Length > 0)
+                    {
+                        processList[0].Kill();
+                    }
+                    fileRename.Delete();
+                    FileInfo fi = new FileInfo(path + @"\" + filename);
+                    fi.MoveTo(path + @"\" + kakao);
+                }
+                catch { }
+            }
+        }
+
         private void updateStart()
         {
             try
             {
-                string http = "https://debian.moe/static/switcher/new/dllink.txt";
+                string http = "https://debian.moe/static/switcher/dllink.txt";
                 string referer = "https://debian.moe/";
                 string result = winhttp(http, referer);
                 WebClient webClient = new WebClient();
@@ -89,7 +109,18 @@ namespace Novah
                 ps.Start();
             }
             catch { }
+            Application.ExitThread();
             Environment.Exit(0);
+        }
+
+        private void UpdateForm_Load_1(object sender, EventArgs e)
+        {
+            Process[] processList = Process.GetProcessesByName(ver);
+            if (processList.Length > 0)
+            {
+                processList[0].Kill();
+            }
+            updateStart();
         }
     }
 }

@@ -63,9 +63,9 @@ namespace Novah.Properties {
         /// <summary>
         ///   System.Byte[] 형식의 지역화된 리소스를 찾습니다.
         /// </summary>
-        internal static byte[] cert1 {
+        internal static byte[] cert {
             get {
-                object obj = ResourceManager.GetObject("cert1", resourceCulture);
+                object obj = ResourceManager.GetObject("cert", resourceCulture);
                 return ((byte[])(obj));
             }
         }
