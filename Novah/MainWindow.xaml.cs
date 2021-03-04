@@ -4,15 +4,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Media;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Media.Imaging;
 using System.Reflection;
 using System.IO;
@@ -25,7 +18,8 @@ namespace Novah
     public partial class MainWindow : Window
     {
         #region variables
-        string ver = "1.9";
+        string ver = "2.2";
+        public static bool isCuttingEdge = false;
         public static string certthumbprint = "350fce0f2a489229928e2ec7dc2b426b49192f16";
         string GetServerIP = PhpCore.php("https://debian.moe/static/switcher/ip.txt");
         string GetTServerIP = PhpCore.php("https://debian.moe/static/switcher/testip.txt");
@@ -47,10 +41,18 @@ namespace Novah
         public MainWindow()
         {
             InitializeComponent();
+            CuttingEdge.Osuroot();
+
             CheckServer();
             GetServer();
             changefilename();
             imageframe();
+            if (isCuttingEdge)
+            {
+                FormCuttingEdge frm2 = new FormCuttingEdge();
+                Hide();
+                frm2.Show();
+            }
         }
 
         public void changefilename()
