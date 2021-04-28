@@ -20,7 +20,7 @@
                 </RowDefinition>
             </Grid.RowDefinitions>
 
-            <Border x:Name="border" CornerRadius="30" MouseLeftButtonDown="Border_MouseLeftButtonDown" Initialized="Border_Initialized" Margin="31,0">
+            <Border x:Name="border" CornerRadius="30" Margin="31,0">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -36,7 +36,7 @@
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
-            <Border x:Name="border_sub" CornerRadius="30" MouseLeftButtonDown="Border_MouseLeftButtonDown" Initialized="Border_Initialized" Margin="31,0">
+            <Border x:Name="border_sub" CornerRadius="30" Margin="31,0">
                 <Border.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <LinearGradientBrush.RelativeTransform>
@@ -47,8 +47,8 @@
                                 <TranslateTransform/>
                             </TransformGroup>
                         </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#76b852" Offset="0"/>
-                        <GradientStop Color="#8dc26f" Offset="1"/>
+                        <GradientStop Color="#FFC3C37B" Offset="0"/>
+                        <GradientStop Color="#FF8CECDA" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
@@ -62,13 +62,13 @@
                           HorizontalAlignment="Center" Margin="148,0"/>
             </StackPanel>
             <Canvas Margin="-10,0,10,0" RenderTransformOrigin="0.55,0.585">
-                <Image x:Name="exit" Source="Assets/close_default.png" Height="24" Canvas.Left="315" Canvas.Top="23" Width="24" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseEnter="exit_MouseEnter" MouseLeave="exit_MouseLeave" Cursor="">
+                <Image x:Name="exit" Source="Assets/close_default.png" Height="24" Canvas.Left="315" Canvas.Top="23" Width="24" Stretch="Fill" Cursor="">
                     <Image.Effect>
                         <DropShadowEffect RenderingBias="Quality" ShadowDepth="1" Color="#FF939393"/>
                     </Image.Effect>
                 </Image>
             </Canvas>
-            <local1:ToggleButton x:Name="Bu" Height="69" VerticalAlignment="Center" Width="Auto" MouseLeftButtonDown="Bu_MouseLeftButtonDown" RenderTransformOrigin="0.5,0.5" Margin="112,257,111,94" Visibility="Hidden">
+            <local1:ToggleButton x:Name="Bu" Height="69" VerticalAlignment="Center" Width="Auto" RenderTransformOrigin="0.5,0.5" Margin="112,257,111,94" Visibility="Hidden">
                 <local1:ToggleButton.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -87,9 +87,9 @@
             </StackPanel>
         </Grid>
 
-        <Image Name="img" Source="assets/img/Frame0.png" Margin="114,239,114,103" MouseLeftButtonDown="img_MouseLeftButtonDown"/>
+        <Image Name="img" Source="assets/img/Frame0.png" Margin="114,239,114,103"/>
 
-        <Button Content="Button" VerticalAlignment="Top" Margin="150,331,150,0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="#02DDDDDD" Click="Button_Click"/>
+        <Button Content="Button" VerticalAlignment="Top" Margin="150,331,150,0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="#02DDDDDD"/>
         <Label Content="- Debian Switcher -" VerticalAlignment="Top" Margin="60,185,60,0" FontWeight="Bold" FontFamily="Arial" FontSize="13" FontStretch="ExtraExpanded" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#CCFFFFFF" Background="#00000000"/>
     </Grid>
 </Window>

@@ -46,8 +46,8 @@
                                 <TranslateTransform/>
                             </TransformGroup>
                         </LinearGradientBrush.RelativeTransform>
-                        <GradientStop Color="#FF5277B8" Offset="0"/>
-                        <GradientStop Color="#FFB1A8EE" Offset="1"/>
+                        <GradientStop Color="#FF52AAB8" Offset="0"/>
+                        <GradientStop Color="#FFB2EEA8" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
             </Border>
@@ -87,6 +87,6 @@
         </Grid>
 
         <Image Name="img" Source="assets/img/Frame0.png" Margin="114,239,114,103" MouseLeftButtonDown="img_MouseLeftButtonDown" />
-        <Label Content="- Debian Switcher for CuttingEdge -" VerticalAlignment="Top" Margin="60,185,60,0" FontWeight="Bold" FontFamily="Arial" FontSize="13" FontStretch="ExtraExpanded" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#CCFFFFFF" Background="#00000000"/>
+        <Label Content="- Debian Switcher -" VerticalAlignment="Top" Margin="60,185,60,0" FontWeight="Bold" FontFamily="Arial" FontSize="13" FontStretch="ExtraExpanded" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="#CCFFFFFF" Background="#00000000"/>
     </Grid>
 </Window>

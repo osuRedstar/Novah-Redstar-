@@ -43,7 +43,7 @@
             this.materialLabel2.Location = new System.Drawing.Point(127, 263);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(104, 18);
+            this.materialLabel2.Size = new System.Drawing.Size(104, 19);
             this.materialLabel2.TabIndex = 5;
             this.materialLabel2.Text = "Please Wait ...";
             // 
@@ -56,7 +56,7 @@
             this.materialLabel1.Location = new System.Drawing.Point(115, 238);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(123, 18);
+            this.materialLabel1.Size = new System.Drawing.Size(124, 19);
             this.materialLabel1.TabIndex = 4;
             this.materialLabel1.Text = "UPDATING NOW!";
             // 
@@ -83,6 +83,7 @@
             this.MinimizeBox = false;
             this.Name = "UpdateForm";
             this.Style = MetroFramework.MetroColorStyle.Purple;
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.UpdateForm_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();

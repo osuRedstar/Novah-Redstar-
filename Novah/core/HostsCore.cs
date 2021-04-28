@@ -51,6 +51,13 @@ namespace Novah.core
                 Environment.Exit(0);
             }
         }
+
+        public static void removehosts()
+        {
+            string[] _hosts = gethosts();
+            _hosts = _hosts.Where(x => !x.Contains(".ppy.sh")).ToArray();
+            changehosts(_hosts);
+        }
     }
 }
 public enum Server

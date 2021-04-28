@@ -9,18 +9,18 @@ namespace Novah.core
 {
     class UpdateCore
     {
-        public static string verchk = "0";
+        public static bool verchk = false;
 
         public static void version(string version)
         {
             string result = PhpCore.php("https://debian.moe/static/switcher/new/ver.txt");
             if (result != version)
             {
-                verchk = "0";
+                verchk = false;
             }
             if (result == version)
             {
-                verchk = "1";
+                verchk = true;
             }
         }
 

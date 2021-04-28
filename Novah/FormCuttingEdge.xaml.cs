@@ -52,7 +52,9 @@ namespace Novah
         {
             InitializeComponent();
             state = false;
-            test.Text = "You're Connected to Bancho.";
+            border_sub.Opacity = 0;
+            border.Opacity = 100;
+            test.Text = "Click The Button!";
             imageframe();
             UninstallCerts();
             changefilename();
@@ -85,16 +87,10 @@ namespace Novah
         {
             try
             {
-                string[] _hosts = HostsCore.gethosts();
-                _hosts = _hosts.Where(x => !x.Contains(".ppy.sh")).ToArray();
-                HostsCore.changehosts(_hosts);
-
+                HostsCore.removehosts();
                 CertificateCore.UninstallCertificates();
             }
-            catch (Exception ex)
-            {
-
-            }
+            catch { MessageBox.Show("REMOVE CERTIFICATE FAILED"); }
         }
 
         private void BtnChange(object sender, RoutedEventArgs e)
@@ -121,7 +117,7 @@ namespace Novah
                     }
                     Dispatcher.Invoke(new Action(() =>
                     {
-                        test.Text = state ? "You're Connected to Debian." : "You're Connected To Bancho.";
+                        test.Text = state ? "Welcome To Debian, GLHF!" : "Click The Button!";
 
                     }));
                     clickable = true;
