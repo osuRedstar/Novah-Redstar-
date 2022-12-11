@@ -117,7 +117,7 @@ namespace Novah
                     }
                     Dispatcher.Invoke(new Action(() =>
                     {
-                        test.Text = state ? "Welcome To Debian, GLHF!" : "Click The Button!";
+                        test.Text = state ? "Welcome To Redstar, GLHF!" : "Click The Button!";
 
                     }));
                     clickable = true;
@@ -132,7 +132,8 @@ namespace Novah
             string osudir = osuroot + "\\osu!.exe";
             osudir = osudir.Substring(1);
             psi.FileName = osudir;
-            psi.Arguments = state ? "" : @"-devserver debian.moe";
+            //psi.Arguments = state ? "" : @"-devserver debian.moe";
+            psi.Arguments = state ? "" : @"-devserver redstar.moe";
             if (!state)
             {
                 Process.Start(psi);

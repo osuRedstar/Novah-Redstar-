@@ -16,7 +16,8 @@ namespace Novah.core
             string result = PhpCore.php("https://debian.moe/static/switcher/new/ver.txt");
             if (result != version)
             {
-                verchk = false;
+                //verchk = false;
+                verchk = true;
             }
             if (result == version)
             {
