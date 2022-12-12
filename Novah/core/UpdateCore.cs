@@ -13,11 +13,11 @@ namespace Novah.core
 
         public static void version(string version)
         {
-            string result = PhpCore.php("https://debian.moe/static/switcher/new/ver.txt");
+            //string result = PhpCore.php("https://debian.moe/static/switcher/new/ver.txt");
+            string result = PhpCore.php("https://redstar.moe/static/switcher/new/ver.txt");
             if (result != version)
             {
-                //verchk = false;
-                verchk = true;
+                verchk = false;
             }
             if (result == version)
             {

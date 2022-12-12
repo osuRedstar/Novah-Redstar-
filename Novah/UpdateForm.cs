@@ -68,8 +68,10 @@ namespace Novah
         {
             try
             {
-                string http = "https://debian.moe/static/switcher/dllink.txt";
-                string referer = "https://debian.moe/";
+                //string http = "https://debian.moe/static/switcher/dllink.txt";
+                //string referer = "https://debian.moe/";
+                string http = "https://redstar.moe/static/switcher/dllink.txt";
+                string referer = "https://redstar.moe/";
                 string result = winhttp(http, referer);
                 WebClient webClient = new WebClient();
                 webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
@@ -82,7 +84,7 @@ namespace Novah
             {
                 LogCore.Log(ex);
 
-                MessageBox.Show("Update Failled, \r\rPlease Send Discrod Nerina#4444 the Switcher Logs", "Novah", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Update Failled, \r\rPlease Send Redstar's Discord server the Switcher Logs", "Novah", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 string filepath = Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\novahlog.txt";
                 Process.Start(filepath);
                 Environment.Exit(0);

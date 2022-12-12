@@ -18,11 +18,14 @@ namespace Novah
     public partial class MainWindow : Window
     {
         #region variables
-        string ver = "2.3";
+        //string ver = "2.3";
+        string ver = Assembly.GetExecutingAssembly().GetName().Version.ToString();
         public static bool isCuttingEdge = false;
         public static string certthumbprint = "350fce0f2a489229928e2ec7dc2b426b49192f16";
-        string GetServerIP = PhpCore.php("https://debian.moe/static/switcher/ip.txt");
-        string GetTServerIP = PhpCore.php("https://debian.moe/static/switcher/testip.txt");
+        //string GetServerIP = PhpCore.php("https://debian.moe/static/switcher/ip.txt");
+        //string GetTServerIP = PhpCore.php("https://debian.moe/static/switcher/testip.txt");
+        string GetServerIP = PhpCore.php("https://redstar.moe/static/switcher/ip.txt");
+        string GetTServerIP = PhpCore.php("https://redstar.moe/static/switcher/testip.txt");
         #endregion
 
         #region FormEvents
