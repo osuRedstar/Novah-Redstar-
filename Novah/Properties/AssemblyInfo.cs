@@ -7,13 +7,13 @@ using System.Windows;
 // 어셈블리에 대한 일반 정보는 다음 특성 집합을 통해 
 // 제어됩니다. 어셈블리와 관련된 정보를 수정하려면
 // 이러한 특성 값을 변경하세요.
-[assembly: AssemblyTitle("Novah")]
+[assembly: AssemblyTitle("Novah - RedstarOSU!")]
 [assembly: AssemblyDescription("Redstar's Switcher (Copied by Debian's Switcher)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Novah")]
-[assembly: AssemblyCopyright("Copyright Nerina, DebianOSU! ©  2020")]
-[assembly: AssemblyTrademark("Nerina DESU")]
+[assembly: AssemblyProduct("Novah - RedstarOSU!")]
+[assembly: AssemblyCopyright("Copyright Nerina, DebianOSU! ©  2020 & RedstarOSU!")]
+[assembly: AssemblyTrademark("Nerina DESU & RedstarOSU!")]
 [assembly: AssemblyCulture("")]
 
 // ComVisible을 false로 설정하면 이 어셈블리의 형식이 COM 구성 요소에 
@@ -51,5 +51,5 @@ using System.Windows;
 // 모든 값을 지정하거나 아래와 같이 '*'를 사용하여 빌드 번호 및 수정 번호를
 // 기본값으로 할 수 있습니다.
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.6.4.0")]
-[assembly: AssemblyFileVersion("1.6.4.0")]
+[assembly: AssemblyVersion("1.6.5.0")]
+[assembly: AssemblyFileVersion("1.6.5.0")]
