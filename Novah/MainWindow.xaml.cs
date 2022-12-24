@@ -52,14 +52,14 @@ namespace Novah
         public void changefilename()
         {
             string filename = System.IO.Path.GetFileName(Assembly.GetEntryAssembly().Location);
-            string kakao = "Novah.exe";
+            string kakao = "Novah - RedstarOSU.exe";
             if (filename != kakao)
             {
                 string path = Environment.CurrentDirectory;
                 FileInfo fileRename = new FileInfo(path + @"\" + kakao);
                 try
                 {
-                    Process[] processList = Process.GetProcessesByName("Novah");
+                    Process[] processList = Process.GetProcessesByName("Novah - RedstarOSU");
                     if (processList.Length > 0)
                     {
                         processList[0].Kill();
