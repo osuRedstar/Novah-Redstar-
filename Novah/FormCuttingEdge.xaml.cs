@@ -56,7 +56,7 @@ namespace Novah
             border.Opacity = 100;
             test.Text = "Click The Button!";
             imageframe();
-            UninstallCerts();
+            /*UninstallCerts();*/
             changefilename();
         }
 
@@ -83,7 +83,7 @@ namespace Novah
             }
         }
 
-        private void UninstallCerts()
+        /*private void UninstallCerts()
         {
             try
             {
@@ -91,7 +91,7 @@ namespace Novah
                 CertificateCore.UninstallCertificates();
             }
             catch { MessageBox.Show("REMOVE CERTIFICATE FAILED"); }
-        }
+        }*/
 
         private void BtnChange(object sender, RoutedEventArgs e)
         {

@@ -26,12 +26,12 @@ namespace ToggleSwitch
             Back.Fill = Off;
             Toggled = false;
             Dot.Margin = LeftSide;
-            GetServer();
+            /*GetServer();*/
         }
 
         public bool Toggled1 { get => Toggled; set => Toggled = value; }
 
-        private void GetServer()
+        /*private void GetServer()
         {
             try
             {
@@ -58,7 +58,7 @@ namespace ToggleSwitch
                 Process.Start(filepath);
                 Environment.Exit(0);
             }
-        }
+        }*/
 
         private void Dot_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {

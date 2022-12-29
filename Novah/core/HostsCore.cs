@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.IO;
 using System.Diagnostics;
 using System.Windows;
@@ -63,4 +63,4 @@ namespace Novah.core
 public enum Server
 {
     bancho, debian, redstar
-}
+}*/
