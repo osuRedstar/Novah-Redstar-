@@ -130,7 +130,7 @@ namespace Novah
         {
             ProcessStartInfo psi = new ProcessStartInfo();
             string osudir = osuroot + "\\osu!.exe";
-            osudir = osudir.Substring(1);
+            //osudir = osudir.Substring(1); CuttingEdge.cs 에서 레지스트리 경로 바꿈으로 인하여 맨 앞에 띄어쓰기가 없으므로 삭제함
             psi.FileName = osudir;
             //psi.Arguments = state ? "" : @"-devserver debian.moe";
             psi.Arguments = state ? "" : @"-devserver redstar.moe";

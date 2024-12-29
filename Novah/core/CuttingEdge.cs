@@ -17,12 +17,13 @@ namespace Novah.core
         {
             try
             {
-                using (var key = Registry.LocalMachine.OpenSubKey("Software\\Classes\\osu\\DefaultIcon"))
+                //using (var key = Registry.LocalMachine.OpenSubKey("Software\\Classes\\osu\\DefaultIcon"))
+                using (var key = Registry.ClassesRoot.OpenSubKey("osu\\Shell\\Open\\Command"))
                 {
                     var RootValues = key?.GetValue("");
                     string RootValue = (string)RootValues;
-                    RootValue = RootValue.Replace('"',' ');
-                    RootValue = RootValue.Replace("\\osu!.exe ,1", "");
+                    //RootValue = RootValue.Replace('"',' ').Replace("\\osu!.exe ,1", "");
+                    RootValue = RootValue.Replace("\"", "").Split(new string[] { "\\osu!.exe" }, StringSplitOptions.None)[0];
                     if (RootValue != null)
                     {
                         strOsuRoot = (string)RootValue;

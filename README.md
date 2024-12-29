@@ -15,6 +15,11 @@
 <a>Remove Check host file check & certificate</a>
 <br>
 <br>
+<b>Redstar ver --> 1.6.7.0 (2024 / 12 / 29)</b>
+<br>
+<a>Edit Registry path</a>
+<br>
+<br>
 
 # NOVAH(DebianSwitcher)
  Novah is a debian's new switcher
