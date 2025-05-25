@@ -10,14 +10,13 @@
 <b>Redstar ver --> 1.6.5.0 (2022 / 12 / 24)</b>
 <br>
 <br>
-<b>Redstar ver --> 1.6.6.0 (2022 / 12 / 30)</b>
-<br>
-<a>Remove Check host file check & certificate</a>
+<b>Redstar ver --> 1.6.6.0 (2022 / 12 / 30)</b><br><a>Remove Check host file check & certificate</a>
 <br>
 <br>
-<b>Redstar ver --> 1.6.7.0 (2024 / 12 / 29)</b>
+<b>Redstar ver --> 1.6.7.0 (2024 / 12 / 29)</b><br><a>Edit Registry path</a>
 <br>
-<a>Edit Registry path</a>
+<br>
+<b>Redstar ver --> 1.6.8.0 (2025 / 05 / 26)</b><br><a>Edit Registry path</a>
 <br>
 <br>
 

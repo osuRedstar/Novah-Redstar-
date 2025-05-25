@@ -18,12 +18,20 @@ namespace Novah.core
             try
             {
                 //using (var key = Registry.LocalMachine.OpenSubKey("Software\\Classes\\osu\\DefaultIcon"))
-                using (var key = Registry.ClassesRoot.OpenSubKey("osu\\Shell\\Open\\Command"))
+                using (var key = Registry.ClassesRoot.OpenSubKey("discord-367827983903490050\\Shell\\Open\\Command"))
                 {
-                    var RootValues = key?.GetValue("");
-                    string RootValue = (string)RootValues;
+                    string RootValue = (string)key?.GetValue("");
                     //RootValue = RootValue.Replace('"',' ').Replace("\\osu!.exe ,1", "");
-                    RootValue = RootValue.Replace("\"", "").Split(new string[] { "\\osu!.exe" }, StringSplitOptions.None)[0];
+                    try
+                    {
+                        RootValue = RootValue.Replace("\"", "").Split(new string[] { "\\osu!.exe" }, StringSplitOptions.None)[0];
+                    }
+                    catch (Exception)
+                    {
+                        LogCore.Log("HKEY_CLASSES_ROOT\\discord-367827983903490050\\shell\\open\\command --> HKEY_CLASSES_ROOT\\osu\\Shell\\Open\\Command\n");
+                        RootValue = (string)Registry.ClassesRoot.OpenSubKey("osu\\Shell\\Open\\Command")?.GetValue("");
+                        RootValue = RootValue.Replace("\"", "").Split(new string[] { "\\osu!.exe" }, StringSplitOptions.None)[0];
+                    }
                     if (RootValue != null)
                     {
                         strOsuRoot = (string)RootValue;
